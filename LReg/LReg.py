@@ -29,10 +29,18 @@ def lreg(ind_variable,dep_variable):
 	params = []
 	B0 = 0.0
 	B1 = 0.0
-
-    #estimate the linear regression parameters (B0 and B1) here
-    
 	
+	xbar = sum(ind_variable)/len(ind_variable)   
+	ybar = sum(dep_variable)/len(dep_variable)
+    
+	num = 0.0
+	den = 0.0
+    
+	for i in range(len(dep_variable)):
+		num += ind_variable[i] * (dep_variable[i]-ybar)
+		den += ind_variable[i] * (ind_variable[i]-xbar)
+	B1 = num/den
+	B0 = ybar - B1*xbar
     
 
 
