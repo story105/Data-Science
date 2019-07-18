@@ -66,15 +66,12 @@ def knn(train_data, train_labels, test_data): # labels is seteosa/etc
 		
 		predicted_label = train_labels[final_prediction]
 		predictions.append(predicted_label)	
-	#implement KNN here
-	#for each test data point predict the label and add your prediction to the preditions list
+	
 	#compare to every data point in train_data using cosDistance by making a call to the above function
 	#find the index, c, of the closest data point
 
 	return predictions
 
-
-#this is the main routine of the program. You should not have to modify anything here
 if __name__ == "__main__":
 	train_matrix = readData(TRAIN_DATA_FILE)
 	train_data = train_matrix[0]
