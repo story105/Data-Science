@@ -49,7 +49,6 @@ def lreg(ind_variable,dep_variable):
 	return params
 
 
-#this is the main routine of the program. You should not have to modify anything here
 if __name__ == "__main__":
 	train_matrix = readData(TRAIN_DATA_FILE)
 	parameters = lreg(train_matrix[0],train_matrix[1])
